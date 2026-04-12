@@ -2,10 +2,10 @@
   "name": "minecraft-afk-bot",
   "version": "2.2",
   "description": "Robust AFK bot for Minecraft servers with infinite uptime.",
-  "main": "index.js",
+  "main": "Main.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node --check index.js"
+    "start": "node Main.js",
+    "test": "node --check Main.js"
   },
   "author": "Lamgerr",
   "license": "MIT",
