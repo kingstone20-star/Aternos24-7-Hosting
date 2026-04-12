@@ -1,7 +1,7 @@
 const { spawn } = require("child_process");
 
 // 🚀 Start bot
-const botProcess = spawn("node", ["node.js"], {
+const botProcess = spawn("index", ["index.js"], {
     stdio: "inherit"
 });
 
