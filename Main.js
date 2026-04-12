@@ -1,70 +1,79 @@
 const { spawn } = require("child_process");
+const path = require("path");
 
-// 🚀 Start bot
-const botProcess = spawn("index", ["index.js"], {
+// ===== 🔧 CHỈNH TÊN FILE BOT =====
+const BOT_FILE = "index.js"; // đổi thành "node.js" nếu bạn dùng tên đó
+
+// ===== 📂 ĐƯỜNG DẪN TUYỆT ĐỐI =====
+const botPath = path.join(__dirname, BOT_FILE);
+
+console.log("📂 Bot path:", botPath);
+
+// ===== 🚀 START BOT =====
+const botProcess = spawn("node", [botPath], {
     stdio: "inherit"
 });
 
 console.log("🚀 Bot started (PID):", botProcess.pid);
 
-// ⏰ 10 phút
+// ===== 🧠 BẮT LỖI SPAWN =====
+botProcess.on("error", (err) => {
+    console.log("❌ Spawn error:", err);
+});
+
+// ===== 📉 BOT EXIT =====
+botProcess.on("exit", (code, signal) => {
+    console.log(`⚠️ Bot exited | code: ${code} | signal: ${signal}`);
+});
+
+// ===== ⏰ 30 PHÚT =====
 const TIME_LIMIT = 30 * 60 * 1000;
 
-// 🔥 Hàm kill tổng hợp
+// ===== 💀 HÀM KILL FULL =====
 function forceKill() {
     console.log("⚠️ Bắt đầu shutdown toàn bộ...");
 
     try {
-        // 1. Kill nhẹ (cho bot tự cleanup nếu có)
         botProcess.kill("SIGTERM");
-        console.log("✔ SIGTERM sent");
-    } catch (e) {}
+        console.log("✔ SIGTERM");
+    } catch {}
 
     setTimeout(() => {
         try {
-            // 2. Kill trung bình
             botProcess.kill("SIGINT");
-            console.log("✔ SIGINT sent");
-        } catch (e) {}
+            console.log("✔ SIGINT");
+        } catch {}
     }, 1000);
 
     setTimeout(() => {
         try {
-            // 3. Kill mạnh
             botProcess.kill("SIGKILL");
-            console.log("🔥 SIGKILL sent");
-        } catch (e) {}
+            console.log("🔥 SIGKILL");
+        } catch {}
     }, 2000);
 
     setTimeout(() => {
         try {
-            // 4. Kill luôn process chính (main.js)
             console.log("💀 Kill main process");
             process.kill(process.pid, "SIGKILL");
-        } catch (e) {
+        } catch {
             process.exit(1);
         }
     }, 3000);
 
-    // 5. Fallback cuối
     setTimeout(() => {
         console.log("☠️ Force exit fallback");
         process.exit(1);
     }, 5000);
 }
 
-// ⏰ Trigger sau 10 phút
+// ===== ⏰ TRIGGER =====
 setTimeout(() => {
-    console.log("⏰ Hết 10 phút → tiến hành kill!");
+    console.log("⏰ Hết 30 phút → kill!");
     forceKill();
 }, TIME_LIMIT);
 
-// 🛑 Nếu bot tự tắt trước
-botProcess.on("exit", (code, signal) => {
-    console.log(`Bot exited | code: ${code} | signal: ${signal}`);
-});
-
-// 🧠 Anti crash main
+// ===== 🧠 ANTI CRASH =====
 process.on("uncaughtException", (err) => {
     console.log("❌ Uncaught Exception:", err);
     forceKill();
