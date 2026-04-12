@@ -6,8 +6,8 @@
     "type": "offline"
   },
   "server": {
-    "ip": "aechsmc.playwithbao.com",
-    "port": 52060,
+    "ip": "aechsmc.joinmc.world",
+    "port": 19786,
     "version": "1.17.1",
     "try-creative": false
   },
