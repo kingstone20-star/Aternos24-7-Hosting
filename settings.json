@@ -6,8 +6,8 @@
     "type": "offline"
   },
   "server": {
-    "ip": "aechsmc.joinmc.world",
-    "port": 19786,
+    "ip": "aechsmc.mcsh.io",
+    "port": 25565,
     "version": "1.17.1",
     "try-creative": false
   },
@@ -19,7 +19,7 @@
   },
   "utils": {
     "auto-auth": {
-      "enabled": true,
+      "enabled": false,
       "password": "chalol78"
     },
     "anti-afk": {
@@ -27,7 +27,7 @@
       "sneak": true
     },
     "chat-messages": {
-      "enabled": true,
+      "enabled": false,
       "repeat": true,
       "repeat-delay": 1200,
       "messages": [
