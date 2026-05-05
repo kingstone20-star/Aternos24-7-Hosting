@@ -6,8 +6,8 @@
     "type": "offline"
   },
   "server": {
-    "ip": "aechsmc.mcsh.io",
-    "port": 25565,
+    "ip": "sg-01.freezehost.pro",
+    "port": 8905,
     "version": "1.21.11",
     "try-creative": false
   },
