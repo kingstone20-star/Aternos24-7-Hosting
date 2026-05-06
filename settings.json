@@ -7,7 +7,7 @@
   },
   "server": {
     "ip": "sg-01.freezehost.pro",
-    "port": 8905,
+    "port": 8893,
     "version": "1.21.11",
     "try-creative": false
   },
