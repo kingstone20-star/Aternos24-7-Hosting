@@ -13,9 +13,9 @@
   },
   "position": {
     "enabled": true,
-    "x": 0,
+    "x": 29999900,
     "y": 100,
-    "z": 0
+    "z": 29999900
   },
   "utils": {
     "auto-auth": {
@@ -40,7 +40,7 @@
     "auto-reconnect-delay": 5000,
     "max-reconnect-delay": 120000,
     "periodic-rejoin": {
-      "enabled": false,
+      "enabled": true,
       "min-interval": 20,
       "max-interval": 60
     }
@@ -65,7 +65,7 @@
     "avoidMobs": true,
     "combat": true,
     "beds": false,
-    "chat": true,
+    "chat": false,
     "console-commands": true
   },
   "combat": {
@@ -86,6 +86,6 @@
     }
   },
   "chat": {
-    "respond": true
+    "respond": false
   }
 }
