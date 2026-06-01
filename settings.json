@@ -1,13 +1,13 @@
 {
   "name": "AFK Bot",
   "bot-account": {
-    "username": "botadmintest",
+    "username": "!@player",
     "password": "",
     "type": "offline"
   },
   "server": {
-    "ip": "sg-01.freezehost.pro",
-    "port": 8905,
+    "ip": "misty.pikamc.vn",
+    "port": 25139,
     "version": "1.21.11",
     "try-creative": false
   },
@@ -49,7 +49,7 @@
     "enabled": true,
     "circle-walk": {
       "enabled": true,
-      "radius": 4,
+      "radius": 40,
       "speed": 3000
     },
     "look-around": {
@@ -64,7 +64,7 @@
   "modules": {
     "avoidMobs": true,
     "combat": true,
-    "beds": false,
+    "beds": true,
     "chat": false,
     "console-commands": true
   },
@@ -73,8 +73,8 @@
     "auto-eat": true
   },
   "beds": {
-    "pick-up-day": false,
-    "place-night": false
+    "pick-up-day": true,
+    "place-night": true
   },
   "discord": {
     "enabled": false,
