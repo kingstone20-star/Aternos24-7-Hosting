@@ -34,7 +34,7 @@
         "/skin https://namemc.com/skin/32a7536d92020e6d"
       ]
     },
-    "chat-log": true,
+    "chat-log": false,
     "auto-reconnect": true,
     "auto-reconnect-delay": 5000,
     "max-reconnect-delay": 12000,
