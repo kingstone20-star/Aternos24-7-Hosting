@@ -6,8 +6,8 @@
     "type": "offline"
   },
   "server": {
-    "ip": "misty.pikamc.vn",
-    "port": 25139,
+    "ip": "kingstone2.aternos.me",
+    "port": 23815,
     "version": "1.21.1",
     "try-creative": false
   },
@@ -45,7 +45,7 @@
     }
   },
   "movement": {
-    "enabled": true,
+    "enabled": false,
     "circle-walk": {
       "enabled": true,
       "radius": 40,
@@ -61,7 +61,7 @@
     }
   },
   "modules": {
-    "avoidMobs": true,
+    "avoidMobs": false,
     "combat": true,
     "beds": true,
     "chat": false,
