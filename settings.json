@@ -6,7 +6,7 @@
     "type": "offline"
   },
   "server": {
-    "ip": "kingstone2.aternos.me:23815",
+    "ip": "kingstone2.aternos.me",
     "port": 23815,
     "version": "1.21.1",
     "try-creative": false
