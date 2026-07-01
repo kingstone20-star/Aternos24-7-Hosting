@@ -6,8 +6,8 @@
     "type": "offline"
   },
   "server": {
-    "ip": "FrenchSMPv3.aternos.me",
-    "port": 16866,
+    "ip": "kingstone2.aternos.me",
+    "port": 23815,
     "version": "1.21.11",
     "try-creative": false
   },
@@ -30,10 +30,8 @@
       "enabled": true,
       "repeat": true,
       "repeat-delay": 120,
-      "messages": [
-        "I'm a regular player",
-        "Subscribe to me!",
-        "I like to play Minecraft!"
+      "messages": 
+        
       ]
     },
     "chat-log": true,
